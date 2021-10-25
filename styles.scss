@@ -32,6 +32,19 @@ $primary-transition: all 0.5s ease;
         pointer-events: none;
       }
     }
+    .nav_links {
+      overflow: visible;
+      li {
+        .icon_link {
+          display: block;
+        }
+      }
+      i {
+        &.arrow {
+          display: none;
+        }
+      }
+    }
   }
   .logo_details {
     height: 60px;
@@ -54,66 +67,49 @@ $primary-transition: all 0.5s ease;
       transition-delay: 0.1s;
     }
   }
+  .nav_links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    li {
+      position: relative;
+      list-style: none;
+      transition: all 0.4s ease;
+      &:hover {
+        background: $secondary-background;
+      }
+      .icon_link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      i {
+        height: 50px;
+        min-width: 78px;
+        text-align: center;
+        line-height: 50px;
+        color: $main-text;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      &.showMenu {
+        i {
+          &.arrow {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
 }
 
-// .sidebar.close .logo_details .logo_name {
-//   transition-delay: 0s;
-//   opacity: 0;
-//   pointer-events: none;
+// .sidebar.close .nav_links i.arrow {
+//   display: none;
 // }
-
-.sidebar .nav_links {
-  height: 100%;
-  padding: 30px 0 150px 0;
-  overflow: auto;
-}
-
-.sidebar.close .nav_links {
-  overflow: visible;
-}
-
-.sidebar .nav_links::-webkit-scrollbar {
-  display: none;
-}
-
-.sidebar .nav_links li {
-  position: relative;
-  list-style: none;
-  transition: all 0.4s ease;
-}
-
-.sidebar .nav_links li:hover {
-  background: $secondary-background;
-}
-
-.sidebar .nav_links li .icon_link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.sidebar.close .nav_links li .icon_link {
-  display: block;
-}
-
-.sidebar .nav_links li i {
-  height: 50px;
-  min-width: 78px;
-  text-align: center;
-  line-height: 50px;
-  color: $main-text;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.sidebar .nav_links li.showMenu i.arrow {
-  transform: rotate(-180deg);
-}
-
-.sidebar.close .nav_links i.arrow {
-  display: none;
-}
 
 .sidebar .nav_links li a {
   display: flex;
@@ -178,9 +174,6 @@ $primary-transition: all 0.5s ease;
 
 .sidebar .nav_links li .sub_menu .link_name {
   display: none;
-}
-
-.sidebar.close .nav_links li .sub_menu .link_name {
 }
 
 .sidebar.close .nav_links li .sub_menu .link_name {

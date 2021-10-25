@@ -21,6 +21,12 @@
       transition-delay: 0s;
       opacity: 0;
       pointer-events: none; }
+    .sidebar.close .nav_links {
+      overflow: visible; }
+      .sidebar.close .nav_links li .icon_link {
+        display: block; }
+      .sidebar.close .nav_links i.arrow {
+        display: none; }
   .sidebar .logo_details {
     height: 60px;
     width: 100%;
@@ -39,49 +45,33 @@
       font-weight: 600;
       transition: 0.3s ease;
       transition-delay: 0.1s; }
-
-.sidebar .nav_links {
-  height: 100%;
-  padding: 30px 0 150px 0;
-  overflow: auto; }
-
-.sidebar.close .nav_links {
-  overflow: visible; }
-
-.sidebar .nav_links::-webkit-scrollbar {
-  display: none; }
-
-.sidebar .nav_links li {
-  position: relative;
-  list-style: none;
-  transition: all 0.4s ease; }
-
-.sidebar .nav_links li:hover {
-  background: #1d1b31; }
-
-.sidebar .nav_links li .icon_link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.sidebar.close .nav_links li .icon_link {
-  display: block; }
-
-.sidebar .nav_links li i {
-  height: 50px;
-  min-width: 78px;
-  text-align: center;
-  line-height: 50px;
-  color: #ffffff;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease; }
-
-.sidebar .nav_links li.showMenu i.arrow {
-  transform: rotate(-180deg); }
-
-.sidebar.close .nav_links i.arrow {
-  display: none; }
+  .sidebar .nav_links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto; }
+    .sidebar .nav_links::-webkit-scrollbar {
+      display: none; }
+    .sidebar .nav_links li {
+      position: relative;
+      list-style: none;
+      transition: all 0.4s ease; }
+      .sidebar .nav_links li:hover {
+        background: #1d1b31; }
+      .sidebar .nav_links li .icon_link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+      .sidebar .nav_links li i {
+        height: 50px;
+        min-width: 78px;
+        text-align: center;
+        line-height: 50px;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease; }
+      .sidebar .nav_links li.showMenu i.arrow {
+        transform: rotate(-180deg); }
 
 .sidebar .nav_links li a {
   display: flex;
